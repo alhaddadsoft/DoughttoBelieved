@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="#ffe1e7e9">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="صغير"
+        android:id="@+id/button9"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="الخط"
+        android:id="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/scrollView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="متوسط"
+        android:id="@+id/button10"
+        android:layout_alignBottom="@+id/button9"
+        android:layout_toRightOf="@+id/button9"
+        android:layout_toEndOf="@+id/button9"
+        android:textSize="18dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="كبير"
+        android:id="@+id/button11"
+        android:layout_toRightOf="@+id/button10"
+        android:layout_toEndOf="@+id/button10"
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/button10" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView3"
+        android:layout_below="@+id/button9"
+        android:layout_above="@+id/adView">
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:autoLink="all"
+            android:textColorLink="#f00"
+            android:linksClickable="true"
+            android:scrollbars="vertical"
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:layout_below="@+id/button9"
+            android:layout_above="@+id/adView"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:scrollIndicators="top" />
+    </ScrollView>
+</RelativeLayout>
